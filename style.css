@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #292929;
+    font-family: 'Open Sans', sans-serif;
+}
+.speech-balloon{
+    width: 300px;
+    height: 200px;
+    background: #33b922;
+    padding: 30px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px #000000;
+    text-align: center;
+    font-size: 80px;
+    line-height: 1.6em;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+}
+.speech-balloon::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: #33b922;
+    position: absolute;
+}
+.speech-balloon.up::before{
+    left: 50%;
+    top: -26px;
+    border-top: 4px solid #ffffff;
+    border-left: 4px solid #ffffff;
+    transform-origin: top left;
+    transform: rotate(45deg);
+}
+.speech-balloon.down::before{
+    left: 50%;
+    bottom: -12px;
+    border-bottom: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    transform-origin: top left;
+    transform: rotate(45deg);
+}
+.speech-balloon.left::before{
+    top: 50%;
+    left: -23px;
+    border-top: 4px solid #ffffff;
+    border-left: 4px solid #ffffff;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+}
+.speech-balloon.right::before{
+    top: 50%;
+    right: -9px;
+    border-bottom: 4px solid #ffffff;
+    border-right: 4px solid #ffffff;
+    transform-origin: top left;
+    transform: rotate(-45deg);
+}
